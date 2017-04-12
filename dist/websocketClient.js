@@ -28,8 +28,8 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const withData = listener => (0, _pipe2.default)((0, _get2.default)(`data`), dataString => JSON.parse(dataString), listener);
 
-class GeminiAPIWebsocketClient {
-  constructor({ key, secret, sandbox = false }) {
+class BitfinexAPIWebsocketClient {
+  constructor({ key, secret }) {
     this.openSocket = onOpen => {
       const authNonce = Date.now() * 1000;
       const authPayload = `AUTH${authNonce}`;
@@ -83,4 +83,4 @@ class GeminiAPIWebsocketClient {
   }
 
 }
-exports.default = GeminiAPIWebsocketClient;
+exports.default = BitfinexAPIWebsocketClient;

@@ -9,8 +9,8 @@ const withData = listener => pipe(
   listener,
 );
 
-export default class GeminiAPIWebsocketClient {
-  constructor({ key, secret, sandbox = false }) {
+export default class BitfinexAPIWebsocketClient {
+  constructor({ key, secret }) {
     this.key = key;
     this.secret = secret;
     this.url = `wss://api.bitfinex.com/ws`;
