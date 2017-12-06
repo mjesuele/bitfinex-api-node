@@ -114,6 +114,8 @@ class BitfinexAPI {
 
     this.getMyActiveOrders = () => this.requestPrivate(`/orders`);
 
+    this.getMyPastOrders = () => this.requestPrivate(`/orders/hist`);
+
     this.getMyActivePositions = () => this.requestPrivate(`/positions`);
 
     this.claimMyPosition = ({ amount, position_id }) => this.requestPrivate(`/position/claim`, { amount, position_id });
