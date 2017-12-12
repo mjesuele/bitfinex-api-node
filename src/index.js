@@ -123,6 +123,9 @@ export default class BitfinexAPI {
   getMyActiveOrders = () =>
     this.requestPrivate(`/orders`)
 
+  getMyPastOrders = () =>
+    this.requestPrivate(`/orders/hist`)
+
   // Positions API
 
   getMyActivePositions = () =>
