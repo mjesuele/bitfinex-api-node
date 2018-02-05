@@ -30,7 +30,7 @@ export default class BitfinexAPI {
     const requestUrl = `${this.baseUrl}${requestPath}`;
 
     const payload = {
-      nonce: Date.now().toString(),
+      nonce: (Date.now() * 1000 ).toString(),
       request: requestPath,
       ...params,
     };
